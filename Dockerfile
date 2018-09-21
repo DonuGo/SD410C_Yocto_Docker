@@ -12,7 +12,7 @@ RUN chmod +x /usr/local/bin/repo
 # Add normal user
 RUN adduser --disabled-password --gecos '' user
 RUN adduser user sudo 
-RUN echo user:user chpasswd
+RUN echo user:user | chpasswd
 RUN locale-gen en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
 
